@@ -62,7 +62,9 @@
           <font face="Verdana" size="4">Address</font>
         </th>
       </tr>
-      <xsl:apply-templates select="$query" />
+      <xsl:apply-templates select="$query">
+          <xsl:sort select="Name" />
+      </xsl:apply-templates>
     </table>
   </xsl:template>
 
